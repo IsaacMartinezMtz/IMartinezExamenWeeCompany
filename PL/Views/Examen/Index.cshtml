@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .container {
+        color: blue
+    }
+
+    .text {
+        color: red
+    }
+
+</style>
+<h2>Index</h2>
+
+<div class="container">
+    <div class="text">
+        Este es un párrafo dentro de un contenedor </p>
+    </div>
+</div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+        $(document).ready(function () { //click
+            const numbers = [10, 5, 25, 8, 30];
+            findLargest(numbers);
+            //frutas();
+
+
+        });
+
+        function findLargest(arr) {
+            let largest = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+
+                }
+            }
+            alert(largest);
+            return largest;
+        }
+        function frutas() {
+            const fruits = ['apple', 'orange', 'banana', 'grape'];
+            for (let i = 0; i < fruits.length; i++) {
+                //alert(fruits[i]);
+                console.log(fruits[i]);
+            }
+
+        }
+    </script>

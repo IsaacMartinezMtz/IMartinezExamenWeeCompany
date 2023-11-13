@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Ejemplo con Error en el cargado del DOM</h1>
+    <button id="btnSubmit">Enviar</button>
+</body>
+</html>
+
+@Scripts.Render("~/bundles/jquery")
+<script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function () {
+        btnSubmit.addEventListener('click', function () {
+            alert("Botón enviado");
+        });
+    });
+</script>
+
+
+
